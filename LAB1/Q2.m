@@ -14,12 +14,12 @@ Vector2(1:n) = 0;
 x1 = -5:4;
 x2 = 0:9
 
-subplot(1,2,1);
-plot(x1,Vector1,'-b');
-subplot(1,2,2);
-plot(x2,Vector1,'-b');
+subplot(2,2,1);
+stem(x1,Vector1);
+subplot(2,2,2);
+stem(x2,Vector1);
 
-%subplot(1,2,3);
-%plot(x2,Vector1,'-b');
-%subplot(1,2,4);
-%plot(x2,Vector2,'-b');
+subplot(2,2,3);
+stem(x1,Vector2);
+subplot(2,2,4);
+stem(x2,Vector2);
