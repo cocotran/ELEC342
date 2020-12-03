@@ -15,13 +15,13 @@ B = input("Enter value for B: ");
 C = input("Enter value for C: ");
 y = (B * x) + C
 
-subplot(1, 2, 1):
+subplot(1, 2, 1);
 stem(n, x, '-b');
 xlabel('n');
 ylabel('x[n]');
 title('Signal x[n] over interval of n')
 
-subplot(1, 2, 2):
+subplot(1, 2, 2);
 stem(x, y, '-r');
 xlabel('x[n]');
 ylabel('y[n]');

@@ -11,19 +11,19 @@ array1 = [1:11];
 array2 = [1:11];
 
 for i=2:11
-	array1(i) = a^(i-1)
+	array1(i) = a^(i-1);
 end
 
-for i=1:12
+for i=1:11
 	if i == 11
-		array2(i) = a^11 - array1(i)
+		array2(i) = abs(a^11 - array1(i));
 	else	
-		array2(i) = array1(i+1) - array1(i)
+		array2(i) = abs(array1(i+1) - array1(i));
 	end
 end
 
 sum_of_array = sum(array1);
-sum_of_series = 1 / (a - 1);
+sum_of_series = 1 / (1 - a);
 
 n = [0:10];
 
@@ -39,13 +39,13 @@ disp(sum_of_array);
 disp('The sum of the series: ');
 disp(sum_of_series);
 
-subplot(1, 2, 1):
+subplot(1, 2, 1);
 stem(n, array1, '-b');
 xlabel('n');
 ylabel('Value');
 title('Terms of the series')
 
-subplot(1, 2, 2):
+subplot(1, 2, 2);
 stem(n, array2, '-r');
 xlabel('n');
 ylabel('Error');
