@@ -1,5 +1,5 @@
-[d, Fs, numBitsPerSample]=wavread('Original.wav', 44100);
-[x, Fs, numBitsPerSample]=wavread('Distorted.wav', 44100);
+[d, Fs]=audioread('Original.wav');
+[x, Fs]=audioread('Distorted.wav');
 
 L=2*Fs;
 t=0:L-1;
@@ -36,4 +36,4 @@ plot(0:Et-1,E);
 title('MSE of Original vs Recovered');
 sound(yy,Fs,numBitsPerSample);
 
-wavwrite(yy,22050,16,'Recovered.wav');
+audiowrite(yy,22050,16,'Recovered.wav');
